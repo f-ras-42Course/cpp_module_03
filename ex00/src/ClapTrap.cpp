@@ -6,7 +6,17 @@
 /*   By: fras <fras@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/05/27 17:01:16 by fras          #+#    #+#                 */
-/*   Updated: 2024/05/27 17:01:17 by fras          ########   odam.nl         */
+/*   Updated: 2024/05/28 07:35:56 by fras          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ClapTrap.hpp"
+
+ClapTrap::ClapTrap()
+{
+
+}
+
+ClapTrap::~ClapTrap()
+{
+}
