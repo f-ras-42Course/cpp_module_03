@@ -6,34 +6,33 @@
 /*   By: fras <fras@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/05/28 15:00:29 by fras          #+#    #+#                 */
-/*   Updated: 2024/05/28 15:03:24 by fras          ########   odam.nl         */
+/*   Updated: 2024/05/28 22:12:54 by fras          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
 ScavTrap::ScavTrap(const std::string& name)
-: name_(name), hit_points_(10), energy_points_(10), attack_damage_(0)
+: ClapTrap(name)
 {
-	std::cout << "Constructor called\n";
+	std::cout << "ScavTrap constructor called\n";
 }
 
 ScavTrap::ScavTrap(const ScavTrap& other)
-: name_(other.name_), hit_points_(other.hit_points_),
-  energy_points_(other.energy_points_), attack_damage_(other.attack_damage_)
+: ClapTrap(other)
 {
 
-	std::cout << "Copy constructor called\n";
+	std::cout << "ScavTrap copy constructor called\n";
 }
 
 ScavTrap::~ScavTrap()
 {
-	std::cout << "Deconstructor called\n";
+	std::cout << "ScavTrap deconstructor called\n";
 }
 
 ScavTrap& ScavTrap::operator=(const ScavTrap& other)
 {
-	std::cout << "Copy assignment operator called\n";
+	std::cout << "ScavTrap copy assignment operator called\n";
 	if (this != &other)
 		name_ = other.name_;
 	return *this;
@@ -59,14 +58,4 @@ void ScavTrap::attack(const std::string& target)
 		takeDamage(attack_damage_);
 	}
 	energy_points_ -= 1;
-}
-
-void ScavTrap::takeDamage(unsigned int amount)
-{
-	hit_points_ -= amount;
-}
-
-void ScavTrap::beRepaired(unsigned int amount)
-{
-	hit_points_ += amount;
 }

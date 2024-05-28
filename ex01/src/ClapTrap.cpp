@@ -6,16 +6,16 @@
 /*   By: fras <fras@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/05/27 17:01:16 by fras          #+#    #+#                 */
-/*   Updated: 2024/05/28 15:01:00 by fras          ########   odam.nl         */
+/*   Updated: 2024/05/28 22:09:43 by fras          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap(const std::string& name)
-: name_(name), hit_points_(10), energy_points_(10), attack_damage_(0)
+: name_(name), hit_points_(100), energy_points_(50), attack_damage_(20)
 {
-	std::cout << "Constructor called\n";
+	std::cout << "ClapTrap constructor called\n";
 }
 
 ClapTrap::ClapTrap(const ClapTrap& other)
@@ -23,17 +23,17 @@ ClapTrap::ClapTrap(const ClapTrap& other)
   energy_points_(other.energy_points_), attack_damage_(other.attack_damage_)
 {
 
-	std::cout << "Copy constructor called\n";
+	std::cout << "ClapTrap copy constructor called\n";
 }
 
 ClapTrap::~ClapTrap()
 {
-	std::cout << "Deconstructor called\n";
+	std::cout << "ClapTrap deconstructor called\n";
 }
 
 ClapTrap& ClapTrap::operator=(const ClapTrap& other)
 {
-	std::cout << "Copy assignment operator called\n";
+	std::cout << "ClapTrap copy assignment operator called\n";
 	if (this != &other)
 		name_ = other.name_;
 	return *this;

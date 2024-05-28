@@ -6,16 +6,17 @@
 /*   By: fras <fras@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/05/28 14:59:56 by fras          #+#    #+#                 */
-/*   Updated: 2024/05/28 15:03:02 by fras          ########   odam.nl         */
+/*   Updated: 2024/05/28 22:12:46 by fras          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SCAVTRAP_HPP
 # define SCAVTRAP_HPP
 
+# include "ClapTrap.hpp"
 # include <iostream>
 
-class ScavTrap
+class ScavTrap: public ClapTrap
 {
 	private:
 		std::string name_;
@@ -28,8 +29,7 @@ class ScavTrap
 		~ScavTrap();
 		ScavTrap& operator=(const ScavTrap& other);
 		void attack(const std::string& target);
-		void takeDamage(unsigned int amount);	
-		void beRepaired(unsigned int amount);
+		void guardGate();
 };
 
 #endif
