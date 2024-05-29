@@ -6,7 +6,7 @@
 /*   By: fras <fras@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/05/27 17:01:16 by fras          #+#    #+#                 */
-/*   Updated: 2024/05/28 22:09:43 by fras          ########   odam.nl         */
+/*   Updated: 2024/05/29 16:43:25 by fras          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,24 +41,26 @@ ClapTrap& ClapTrap::operator=(const ClapTrap& other)
 
 void ClapTrap::attack(const std::string& target)
 {
-	if (!energy_points_)
+	if (!hit_points_)
+	{
+		std::cout << "ClapTrap " << name_ << " is dead; cannot heal or attack\n";
+	}
+	else if (!energy_points_)
 	{
 		std::cout << "ClapTrap " << name_ << " has no energy points left\n";
-		return ;
 	}
-	if (target == name_)
+	else if (target == name_)
 	{
 		std::cout << "ClapTrap " << name_ << " heals itself and restores "\
-				<< attack_damage_ << " hit points\n";
-		beRepaired(attack_damage_);
+				<< attack_damage_ << " hit points! (" << hit_points_ << ")\n";
+		energy_points_ -= 1;
 	}
 	else
 	{
 		std::cout << "ClapTrap " << name_ << " attacks " << target \
 				<< " causing " << attack_damage_ << " points of damage!\n";
-		takeDamage(attack_damage_);
-	}
-	energy_points_ -= 1;
+		energy_points_ -= 1;
+	}	
 }
 
 void ClapTrap::takeDamage(unsigned int amount)

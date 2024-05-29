@@ -6,7 +6,7 @@
 /*   By: fras <fras@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/05/28 14:59:56 by fras          #+#    #+#                 */
-/*   Updated: 2024/05/28 22:12:46 by fras          ########   odam.nl         */
+/*   Updated: 2024/05/29 11:41:48 by fras          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,6 @@
 
 class ScavTrap: public ClapTrap
 {
-	private:
-		std::string name_;
-		int hit_points_;
-		int energy_points_;
-		int attack_damage_;
 	public:
 		ScavTrap(const std::string& name);
 		ScavTrap(const ScavTrap& other);
