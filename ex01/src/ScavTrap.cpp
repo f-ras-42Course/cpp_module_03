@@ -6,7 +6,7 @@
 /*   By: fras <fras@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/05/28 15:00:29 by fras          #+#    #+#                 */
-/*   Updated: 2024/05/29 16:45:56 by fras          ########   odam.nl         */
+/*   Updated: 2024/05/29 17:21:43 by fras          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@ ScavTrap::ScavTrap(const std::string& name)
 : ClapTrap(name)
 {
 	std::cout << "ScavTrap constructor called\n";
+	hit_points_ = 100;
+	energy_points_ = 50;
+	attack_damage_ = 20;
 }
 
 ScavTrap::ScavTrap(const ScavTrap& other)
