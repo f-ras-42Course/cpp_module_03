@@ -6,11 +6,11 @@
 #    By: fras <fras@student.codam.nl>                 +#+                      #
 #                                                    +#+                       #
 #    Created: 2024/05/26 08:28:34 by fras          #+#    #+#                  #
-#    Updated: 2024/05/29 13:23:58 by fras          ########   odam.nl          #
+#    Updated: 2024/05/30 15:27:38 by fras          ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = scavtrap
+NAME = fragtrap
 CC = c++
 CFLAGS = -Werror -Wextra -Wall
 INCLUDE = -I include

@@ -6,7 +6,7 @@
 /*   By: fras <fras@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/05/29 17:24:51 by fras          #+#    #+#                 */
-/*   Updated: 2024/05/29 17:28:30 by fras          ########   odam.nl         */
+/*   Updated: 2024/05/30 15:21:53 by fras          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@ FragTrap::FragTrap(const std::string& name)
 : ClapTrap(name)
 {
 	std::cout << "FragTrap constructor called\n";
+	hit_points_ = 100;
+	energy_points_ = 100;
+	attack_damage_ = 30;
 }
 
 FragTrap::FragTrap(const FragTrap& other)
@@ -64,5 +67,12 @@ void FragTrap::attack(const std::string& target)
 
 void FragTrap::highFiveGuys()
 {
-	std::cout << "FragTrap high five!\n";
+	if (hit_points_ <= 0)
+	{
+		std::cout << "FragTrap " << name_ << " is dead; cannot give a high five.\n";
+	}
+	else
+	{
+		std::cout << "FragTrap " << name_ << " gives a high five!\n";
+	}
 }
