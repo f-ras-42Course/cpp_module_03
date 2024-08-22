@@ -6,7 +6,7 @@
 /*   By: fras <fras@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/05/27 16:28:09 by fras          #+#    #+#                 */
-/*   Updated: 2024/05/30 15:26:52 by fras          ########   odam.nl         */
+/*   Updated: 2024/08/22 13:59:55 by fras          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,17 +23,15 @@ int main()
 
 		for (size_t i = 0; i < 3; i++)
 		{
-			pjotr.attack("Kees");
-			kees.takeDamage(20);
+			pjotr.attack(kees);
 		}
 		for (size_t i = 0; i < 3; i++)
 		{
-			kees.attack("Pjotr");;
+			kees.attack(pjotr);;
 		}
 		for (size_t i = 0; i < 3; i++)
 		{
-			karel.attack("Karel");
-			karel.beRepaired(20);
+			karel.attack(karel);
 		}	
 		pjotr.guardGate();
 		karel.guardGate();
@@ -46,17 +44,15 @@ int main()
 
 		for (size_t i = 0; i < 3; i++)
 		{
-			pjotr.attack("Kees");
-			kees.takeDamage(20);
+			pjotr.attack(kees);
 		}
 		for (size_t i = 0; i < 3; i++)
 		{
-			kees.attack("Pjotr");;
+			kees.attack(pjotr);;
 		}
 		for (size_t i = 0; i < 3; i++)
 		{
-			karel.attack("Karel");
-			karel.beRepaired(20);
+			karel.attack(karel);
 		}	
 		pjotr.highFiveGuys();
 		karel.highFiveGuys();

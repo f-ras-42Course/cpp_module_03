@@ -6,7 +6,7 @@
 /*   By: fras <fras@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/05/28 14:59:56 by fras          #+#    #+#                 */
-/*   Updated: 2024/05/29 17:24:17 by fras          ########   odam.nl         */
+/*   Updated: 2024/08/22 13:45:48 by fras          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,13 @@
 class FragTrap: public ClapTrap
 {
 	public:
+		FragTrap();
 		FragTrap(const std::string& name);
 		FragTrap(const FragTrap& other);
 		~FragTrap();
 		FragTrap& operator=(const FragTrap& other);
 		void attack(const std::string& target);
+		void attack(FragTrap& target);
 		void highFiveGuys();
 };
 
